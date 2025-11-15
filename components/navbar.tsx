@@ -87,33 +87,30 @@ export default function Navbar() {
 
             {/* LEFT */}
             <div className="flex items-center gap-1">
-              <div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+                            <div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
                 <NavDropdown
                   label="Services - Factories"
                   items={[
+                    { label: "Factory Registration", href: "/factory-registration" },
+                    { label: "License Renewal", href: "/renewal" },
                     { label: "Approval of Plans", href: "#" },
-                    { label: "Issue of License", href: "#" },
-                    { label: "Renewal", href: "/renewal" },
                   ]}
                 />
               </div>
 
               <div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
                 <NavDropdown
-  label="Services - Boilers"
-  items={[
-    
-    { label: "Application For Approval Of Boiler / Boiler Component Manufacturing Drawings", href: "/boiler-approval" },
-    { label: "Registration Of Boilers", href: "/registration" },
-    { label: "Recognition for Boiler Repairer/Erector", href: "#" },
-    { label: "Renewal Recognition for Boiler Manufacturer", href: "#" },
-  ]}
-/>
-
+                  label="Services - Boilers"
+                  items={[
+                    { label: "Boiler Registration", href: "/boiler-registration" },
+                    { label: "Certificate Renewal", href: "#" },
+                    { label: "Manufacturing Approval", href: "#" },
+                  ]}
+                />
               </div>
 
               <Link
-                href="#"
+                href="/application-status"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
                 className="
@@ -130,7 +127,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="#"
+                href="/fee-calculator"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
                 className="
@@ -139,7 +136,7 @@ export default function Navbar() {
                   hover:shadow-[0_0_12px_rgba(59,91,255,0.6)]
                 "
               >
-                Boiler Manufacturer
+                Fee Calculator
                 <span className="
                   absolute bottom-1 left-1/2 w-0 h-[2px] 
                   bg-white transition-all duration-300 hover:w-4/5 hover:left-[10%]
@@ -150,9 +147,9 @@ export default function Navbar() {
                 <NavDropdown
                   label="More"
                   items={[
-                    { label: "Boiler Erector", href: "#" },
-                    { label: "FAQ", href: "#" },
-                    { label: "Help Line", href: "#" },
+                    { label: "Documents & Notices", href: "#" },
+                    { label: "FAQs", href: "#" },
+                    { label: "Contact Us", href: "#" },
                   ]}
                 />
               </div>
